@@ -1,5 +1,6 @@
-
+//Components
 import { Metadata } from "next"
+import { HeroForm } from "@/components/home/HeroForm"
 
 export const metadata: Metadata = {
     title: "TMH – Soluciones integrales en Logística",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <main>
-            Soy un Main
+            <HeroForm />
         </main>
     )
 }
