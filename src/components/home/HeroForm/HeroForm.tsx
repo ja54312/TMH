@@ -1,5 +1,6 @@
 //components
 import Image from 'next/image'
+import { Form } from './components/Form'
 //styles
 import styles from './HeroForm.module.sass'
 
@@ -23,34 +24,7 @@ export const HeroForm = () => {
                         <div className={styles.title}>
                             <span>Cotiza tu servicio de transporte y almacenaje</span>
                         </div>
-                        <div className={styles.Form}>
-                            <div className={styles.bloque}>
-                                <div className={styles.title}>
-                                    <span>Datos del servicio</span>
-                                </div>
-                                <div className={styles.containerInputs}>
-                                    <div className={styles.containerInput}>
-                                        <label>Tipo de servicio</label>
-                                        <select
-                                            className={styles.input}
-                                        >
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                        </select>
-                                    </div>
-                                    <div className={styles.containerInput}>
-                                        <label>Fecha de servicio</label>
-                                        <input
-                                            type='date'
-                                            className={styles.input}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div>2</div>
-                            <div>3</div>
-                        </div>
+                        <Form />
                     </form>
                 </div>
             </div>
