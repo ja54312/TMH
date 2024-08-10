@@ -18,7 +18,7 @@ export const DescubreComoViajamos = () => {
                     </div>
                     <div className={styles.text}>
                         <p>
-                            Desde unidades ágiles de 800 kg hasta tráileres de 53', cubrimos todas las necesidades de nuestros clientes con precisión y eficiencia. Esta variedad nos permite ofrecer soluciones personalizadas para cada tipo de carga, asegurando tanto la agilidad en entregas locales como la capacidad para manejar grandes volúmenes a nivel nacional e internacional.
+                            Desde unidades ágiles de 800 kg hasta tráileres de 53, cubrimos todas las necesidades de nuestros clientes con precisión y eficiencia. Esta variedad nos permite ofrecer soluciones personalizadas para cada tipo de carga, asegurando tanto la agilidad en entregas locales como la capacidad para manejar grandes volúmenes a nivel nacional e internacional.
                         </p>
                     </div>
                     <div className={styles.containerButton}>
