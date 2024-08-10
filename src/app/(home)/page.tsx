@@ -6,6 +6,7 @@ import { ServiciosTab } from "@/components/home/ServiciosTab"
 import { DescubreComoViajamos } from "@/components/home/DescubreComoViajamos"
 import { SolucionesLogistica } from "@/components/home/SolucionesLogistica"
 import { SecondBannerInfo } from "@/components/home/SecondBannerInfo"
+import { ContactHome } from "@/components/home/ContactHome"
 
 export const metadata: Metadata = {
     title: "TMH – Soluciones integrales en Logística",
@@ -23,6 +24,7 @@ export default function Home() {
             <DescubreComoViajamos />
             <SolucionesLogistica />
             <SecondBannerInfo />
+            <ContactHome />
         </main>
     )
 }
