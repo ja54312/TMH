@@ -1,0 +1,1 @@
+export { ServiciosTab } from "./ServiciosTab";

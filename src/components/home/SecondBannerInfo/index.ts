@@ -1,0 +1,1 @@
+export { SecondBannerInfo } from "./SecondBannerInfo";
