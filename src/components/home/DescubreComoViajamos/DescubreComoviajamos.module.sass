@@ -2,9 +2,11 @@
     max-width: 1448px
     margin: 0 auto
     width: 100%
-    height: 490px
+    height: 860px
     position: relative
     font-family: $font-primary
+    @media screen and (min-width: 769px)
+        height: 490px
     .containerBackground
         position: absolute
         width: 100%
@@ -23,23 +25,32 @@
         height: 100%
         background: #054166B2
         display: flex
-        flex-direction: row
+        flex-direction: column
         align-items: center
+        @media screen and (min-width: 769px)
+            flex-direction: row
         .containerInformacion
-            width: 50%
+            width: 90%
             height: 100%
             display: flex
             flex-direction: column
             align-items: flex-start
-            padding-left: 40px
+            @media screen and (min-width: 769px)
+                padding-left: 40px
+                width: 50%
             .title
-                padding-top: 100px
+                padding-top: 30px
+                @media screen and (min-width: 769px)
+                    padding-top: 100px
                 & span
-                    font-size: 32px
+                    font-size: 24px
                     font-weight: 700
-                    line-height: 38.73px
+                    line-height: 29.05px
                     text-align: left
                     color: #FFFFFF
+                    @media screen and (min-width: 769px)
+                        font-size: 32px
+                        line-height: 38.73px
             .text
                 padding-top: 10px
                 & p
@@ -67,31 +78,39 @@
                         text-align: left
                         color: #FFFFFF
         .containerCarrusel
-            width: 50%
+            width: 100%
             height: 100%
             display: flex
             flex-direction: column
             align-items: center
             justify-content: center
+            @media screen and (min-width: 769px)
+                width: 50%
             .containerImagen
                 .img
-                    width: 470px
-                    height: 234px
+                    width: 300px
+                    height: 159px
                     position: relative
+                    @media screen and (min-width: 769px)
+                        width: 470px
+                        height: 234px
                     & img
                         margin-top: 40px
                         width: 100%
                         height: 100%
                         object-fit: cover
             .cointainerSlider
-                width: 529px
-                height: 186px
-                border-radius: 90px 10px 90px 10px
+                width: 358px
+                height: 154px
+                border-radius: 10px 90px 10px 90px
                 background: #009DE499
                 display: flex
                 flex-direction: row
                 justify-content: center
                 align-items: center
+                @media screen and (min-width: 769px)
+                    width: 529px
+                    height: 186px
                 .containerArrow
                     width: 32px
                     height: 32px
@@ -104,21 +123,33 @@
                         object-fit: cover
                 .Info
                     display: flex
-                    align-items: center
                     justify-content: center
                     flex-direction: column
-                    padding: 0 30px
-                    & span
-                        font-size: 24px
-                        font-weight: 600
-                        line-height: 12px
-                        text-align: center
-                        color: #FFFFFF
-                .InfoTextDynamic
-                    padding-top: 30px
-                    & span
-                        font-size: 24px
-                        font-weight: 900
-                        line-height: 12px
-                        text-align: center
-                        color: #FFFFFF
+                    align-items: center
+                    .InfoText
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        flex-direction: column
+                        @media screen and (min-width: 769px)
+                            padding: 0 30px
+                        & span
+                            font-size: 20px
+                            font-weight: 600
+                            line-height: 24.2px
+                            text-align: center
+                            color: #FFFFFF
+                            @media screen and (min-width: 769px)
+                                font-size: 24px
+                                line-height: 12px
+                    .InfoTextDynamic
+                        padding-top: 30px
+                        & span
+                            font-size: 20px
+                            font-weight: 900
+                            line-height: 24.2px
+                            text-align: center
+                            color: #FFFFFF
+                            @media screen and (min-width: 769px)
+                                font-size: 24px
+                                line-height: 12px

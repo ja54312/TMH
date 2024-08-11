@@ -2,12 +2,14 @@
     max-width: 1448px
     margin: 0 auto
     width: 100%
-    height: 860px
+    height: 2280px
     font-family: $font-primary
     display: flex
     flex-direction: column
     position: relative
     background-color: #A5B7C24D
+    @media screen and (min-width: 769px)
+        height: 860px
     .backgroung
         width: 100%
         height: 100%
@@ -20,23 +22,30 @@
         position: absolute
         .containerTitle
             width: 100%
-            padding-top: 80px
+            padding-top: 40px
             display: flex
             flex-direction: column
             align-items: center
             margin-bottom: 20px
+            @media screen and (min-width: 769px)
+                padding-top: 80px
             .title
+                display: flex
                 margin-bottom: 20px
                 & span
                     font-size: 32px
                     font-weight: 600
-                    line-height: 28px
+                    line-height: 38.73px
                     text-align: center
                     color: #009DE4
+                    @media screen and (min-width: 769px)
+                        line-height: 28px
             .text
                 display: flex
                 flex-direction: row
                 align-items: center
+                flex-wrap: wrap
+                justify-content: center
                 & span
                     font-family: $font-secondary
                     font-size: 24px
@@ -60,7 +69,7 @@
             justify-content: space-evenly
             .card
                 margin: 20px 0
-                width: 380px
+                width: 309px
                 height: 160px
                 padding: 10px 24px 10px 24px
                 border-radius: 40px
@@ -70,6 +79,9 @@
                 display: flex
                 flex-direction: column
                 align-items: center
+                @media screen and (min-width: 769px)
+                    width: 380px
+                    height: 160px
                 .title
                     width: 100%
                     display: flex

@@ -2,36 +2,51 @@
     max-width: 1448px
     margin: 0 auto
     width: 100%
-    height: 707px
+    height: 1176px
     font-family: $font-primary
     display: flex
     flex-direction: column
     position: relative
+    @media screen and (min-width: 769px)
+        height: 707px
     .background
-        position: absolute
-        top: 0
-        left: 0
         width: 100%
         height: 100%
+        position: relative
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
     .Info
         position: absolute
-        top: 20%
-        left: 5%
+        top: 40%
+        left: 2%
+        height: 100%
+        @media screen and (min-width: 769px)
+            top: 20%
+            left: 5%
         .containerInfo
-            width: 554px
-            height: 437px
-            padding: 32px
+            width: 323px
+            height: 455px
+            padding: 24px 16px 24px 16px
             border-radius: 40px
             background: #05416699
             box-shadow: 0px 6px 12px 0px #00000029
+            @media screen and (min-width: 769px)
+                width: 554px
+                height: 437px
+                padding: 32px
             .title
                 margin-bottom: 30px
                 & span
-                    font-size: 32px
+                    font-size: 24px
                     font-weight: 600
-                    line-height: 38.73px
+                    line-height: 29.05px
                     text-align: left
                     color: #FFFFFF
+                    @media screen and (min-width: 769px)
+                        font-size: 32px
+                        line-height: 38.73px
             .text
                 margin-bottom: 50px
                 & p
@@ -44,7 +59,7 @@
                     color: #FFFFFF
             .containerButton
                 .button
-                    width: 210px
+                    width: 326px
                     height: 48px
                     border-radius: 8px
                     border: 2px solid #FFFFFF
@@ -53,6 +68,8 @@
                     align-items: center
                     justify-content: center
                     cursor: pointer
+                    @media screen and (min-width: 769px)
+                        width: 210px
                     & span
                         padding: 16px
                         font-size: 16px
