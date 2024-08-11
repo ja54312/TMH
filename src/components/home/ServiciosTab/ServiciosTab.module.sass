@@ -2,11 +2,13 @@
     max-width: 1448px
     margin: 0 auto
     width: 100%
-    height: 850px
+    height: auto
     font-family: $font-primary
     display: flex
     flex-direction: column
-    margin-top: 20px
+    margin-top: 75%
+    @media screen and (min-width: 769px)
+        margin-top: 20px
     .ContainerTitle
         max-width: 85%
         margin: 0 auto
@@ -14,83 +16,120 @@
         flex-direction: column
         align-items: center
         .title
+            display: flex
             & span
-                font-size: 32px
+                font-size: 24px
                 font-weight: 600
                 line-height: 28px
                 text-align: center
                 color: #009DE4
+                @media screen and (min-width: 769px)
+                    font-size: 32px
         .text
+            display: flex
             & p
-                font-size: 24px
+                font-size: 18px
                 font-weight: 400
                 line-height: 30.48px
                 letter-spacing: -0.005em
                 text-align: center
                 color: #424242
+                @media screen and (min-width: 769px)
+                    font-size: 24px
     .ContainerTabs
-        width: 85%
-        height: 564px
+        width: 90%
+        height: auto
         margin: 0 auto
+        @media screen and (min-width: 769px)
+            width: 85%
+            height: 564px
         .Tabs
-            width: 100%
-            height: 64px
+            width: 338px
+            height: 62px
             display: flex
             flex-direction: row
-            .Tab
-                width: 273px
+            @media screen and (min-width: 769px)
+                width: 100%
                 height: 64px
+            .Tab
+                width: 177px
+                height: 62px
                 display: flex
                 justify-content: center
                 align-items: center
                 border-radius: 40px 40px 0px 0px
                 background: #FFFFFF
                 cursor: pointer
+                @media screen and (min-width: 769px)
+                    width: 273px
+                    height: 64px
                 & span
                     padding: 20px 32px 20px 32px
-                    font-size: 20px
+                    font-size: 18px
                     font-weight: 700
                     line-height: 24.2px
                     text-align: center
                     color: #222222
+                    @media screen and (min-width: 769px)
+                        font-size: 20px
         .InfoTabs
-            width: 100%
-            height: 500px
+            height: 587px
             display: flex
+            flex-direction: column
+            align-items: center
             gap: 10px
-            border-radius: 0px 40px 40px 40px
+            border-radius: 0px 0px 40px 40px
             background: #E4FAFF
+            padding: 48px 11px
+            @media screen and (min-width: 769px)
+                height: 500px
+                flex-direction: row
+                padding: 0
+                border-radius: 0px 40px 40px 40px
             .containerImg
-                width: 60%
-                height: 100%
+                width: 326px
+                height: 287px
                 display: flex
                 flex-direction: row
                 justify-content: center
                 align-items: center
+                @media screen and (min-width: 769px)
+                    width: 60%
+                    height: 100%
                 .Image
                     & img
                         width: 100%
                         height: 100%
                         object-fit: cover
             .containerInfo
-                width: 40%
+                width: 100%
                 display: flex
                 flex-direction: column
                 align-items: flex-start
                 justify-content: center
+                @media screen and (min-width: 769px)
+                    width: 40%
                 .title
-                    width: 60%
-                    height: 81px
+                    width: 100%
+                    height: 38px
+                    @media screen and (min-width: 769px)
+                        width: 60%
+                        height: 81px
                     & span
                         font-family: $font-popins
-                        font-size: 34px
+                        font-size: 24px
                         font-weight: 700
                         line-height: 38px
                         text-align: left
                         color: #312F0D
+                        @media screen and (min-width: 769px)
+                            font-size: 34px
                 .text
-                    width: 78%
+                    width: 100%
                     padding: 30px 0
+                    @media screen and (min-width: 769px)
+                        width: 78%
+                        padding: 30px 0
                     & p
                         font-family: $font-secondary
                         font-size: 16px
@@ -122,7 +161,7 @@
         align-items: center
         margin: 30px 0
         .button
-            width: 210px
+            width: 358px
             height: 48px
             display: flex
             justify-content: center
@@ -130,6 +169,8 @@
             border-radius: 8px
             background: #009DE4
             cursor: pointer
+            @media screen and (min-width: 769px)
+                width: 210px
             & span
                 padding: 16px
                 font-size: 16px
