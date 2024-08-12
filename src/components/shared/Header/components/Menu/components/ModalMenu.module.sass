@@ -1,0 +1,90 @@
+.visible
+    width: 0
+    opacity: 0
+    transform: translateX(-100%)
+    transition: opacity 0.3s ease, transform 0.3s ease
+    &_content
+        display: none
+.modal
+    z-index: 3
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    opacity: 1
+    transform: translateX(0%)
+    transition: opacity 0.3s ease, transform 0.3s ease
+    &_content
+        background-color: #FFFFFF
+        height: 100%
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16)
+        min-width: 281px
+        width: 60%
+        max-width: 500px
+        overflow: auto
+        border-radius: 0 40px 40px 0
+        position: relative
+    .containerClose
+        width: 100%
+        height: 76px
+        border-bottom: 1px solid #EBEBEB
+        box-shadow: 0px 2px 4px 0px #00000029
+        display: flex
+        align-items: center
+        flex-direction: row
+        justify-content: flex-start
+        margin-bottom: 20px
+        .close
+            font-size: 36px
+            cursor: pointer
+            padding-left: 20px
+        .text
+            font-family: $font-primary
+            font-size: 16px
+            font-weight: 400
+            line-height: 20px
+            color: #424242
+            padding-left: 20px
+    .containerTitles
+        padding-left: 20px
+        .ContainerSimpleTitle
+            width: 100%
+            height: 24px
+            padding: 16px 0px
+            cursor: pointer
+            & > a
+                text-decoration: none
+                & > span
+                    color: #424242
+                    font-family: $font-primary
+                    font-size: 16px
+                    font-weight: 500
+                    line-height: 20px
+    .containerPhone
+        position: absolute
+        bottom: 0
+        width: 258px
+        height: 99px
+        padding: 24px 16px 32px 16px
+        display: flex
+        flex-direction: row
+        .containerImg
+            display: flex
+            flex-direction: column
+            justify-content: center
+        .containerText
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding-left: 10px
+            & span
+                font-family: $font-primary
+                font-size: 16px
+                font-weight: 400
+                line-height: 20px
+                text-align: left
