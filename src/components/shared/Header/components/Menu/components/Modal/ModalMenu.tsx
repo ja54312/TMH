@@ -1,6 +1,4 @@
 "use client"
-//hooks
-import { useState } from 'react';
 //components
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,9 +6,9 @@ import classNames from 'classnames/bind';
 //styles
 import styles from './ModalMenu.module.sass'
 
-const urlArrow = '/images/CaretDown.svg'
+export const ModalMenu = ({ isOpenModal, closeModal }: any) => {
 
-export const ModalMenu = ({ isOpenModal, closeModal }) => {
+    //if (!isOpenModal) return null;
 
     const gotoRoute = () => {
         closeModal()

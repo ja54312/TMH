@@ -1,7 +1,7 @@
 "use client"
 //components
 import Image from 'next/image'
-import { ModalMenu } from './components/ModalMenu'
+import { ModalMenu } from './components/Modal'
 //hooks
 import useModal from '../../../../../hooks/useModal'
 //styles
