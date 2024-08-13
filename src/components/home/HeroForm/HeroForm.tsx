@@ -20,12 +20,7 @@ export const HeroForm = () => {
                     <span>Con <b>TMH</b>, cada envío cuenta una historia</span>
                 </div>
                 <div className={styles.ContainerForm}>
-                    <form className={styles.ContainerForm}>
-                        <div className={styles.title}>
-                            <span>Cotiza tu servicio de transporte y almacenaje</span>
-                        </div>
-                        <Form />
-                    </form>
+                    <Form />
                 </div>
             </div>
         </section>
