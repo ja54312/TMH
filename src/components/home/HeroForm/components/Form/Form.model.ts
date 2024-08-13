@@ -1,5 +1,5 @@
 export interface initialFormProps {
-    tipodeServicio: Services
+    tipodeServicio: string
     fechaServicio: string
     firstName: string
     email: string
@@ -10,7 +10,7 @@ export interface initialFormProps {
 export type Services = 'Servicio de Almacenaje' | 'Servicio de Transporte' | ''
 
 export interface initialErrorProps {
-    tipodeServicio: Services
+    tipodeServicio: string
     fechaServicio: string
     firstName: string
     email: string

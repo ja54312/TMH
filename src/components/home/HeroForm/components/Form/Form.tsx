@@ -47,7 +47,7 @@ export const Form = () => {
     const handleServicio = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setForm({
             ...form,
-            tipodeServicio: event.target.value
+            tipodeServicio: e.target.value
         });
     };
 
