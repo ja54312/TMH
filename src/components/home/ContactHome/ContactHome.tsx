@@ -42,7 +42,9 @@ export const ContactHome = () => {
                             </Link>
                         </div>
                         <div className={styles.secondButton}>
-                            <span>Solicitar una cotización</span>
+                            <Link href="#HeroForm">
+                                <span>Solicitar una cotización</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

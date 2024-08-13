@@ -1,5 +1,6 @@
 //Components
 import Image from 'next/image'
+import Link from 'next/link'
 //Styles
 import styles from './DescubreComoviajamos.module.sass'
 
@@ -23,7 +24,9 @@ export const DescubreComoViajamos = () => {
                     </div>
                     <div className={styles.containerButton}>
                         <div className={styles.button}>
-                            <span>Solicitar una cotización</span>
+                            <Link href="#HeroForm">
+                                <span>Solicitar una cotización</span>
+                            </Link>
                         </div>
                     </div>
                 </div>
