@@ -1,11 +1,12 @@
 //Components
 import Image from 'next/image'
+import Link from 'next/link'
 //Styles
 import styles from './DescubreComoviajamos.module.sass'
 
 export const DescubreComoViajamos = () => {
     return (
-        <section className={styles.SectionDescubreComoViajamos}>
+        <section className={styles.SectionDescubreComoViajamos} id='Unidades'>
             <div className={styles.containerBackground}>
                 <div className={styles.containerImg}>
                     <Image src="/images/almacenFondo.jpeg" alt="camion25T" fill />
@@ -23,7 +24,9 @@ export const DescubreComoViajamos = () => {
                     </div>
                     <div className={styles.containerButton}>
                         <div className={styles.button}>
-                            <span>Solicitar una cotización</span>
+                            <Link href="#HeroForm">
+                                <span>Solicitar una cotización</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,12 @@
 //Components
 import Image from 'next/image';
+import Link from 'next/link';
 //styles
 import styles from './SecondBannerInfo.module.sass';
 
 export const SecondBannerInfo = () => {
     return (
-        <section className={styles.SectionSecondBannerInfo}>
+        <section className={styles.SectionSecondBannerInfo} id='SobreNosotros'>
             <div className={styles.background}>
                 <Image
                     src="/images/conductorTMH.png"
@@ -24,7 +25,9 @@ export const SecondBannerInfo = () => {
                     </div>
                     <div className={styles.containerButton}>
                         <div className={styles.button}>
-                            <span>Solicitar una cotización</span>
+                            <Link href="#HeroForm">
+                                <span>Solicitar una cotización</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

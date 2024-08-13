@@ -29,23 +29,23 @@ export const ModalMenu = ({ isOpenModal, closeModal }: any) => {
                     <span className={styles.text}>Cerrar</span>
                 </div>
                 <div className={styles.containerTitles}>
-                    <div className={styles.ContainerSimpleTitle}>
-                        <Link href='#'>
+                    <div className={styles.ContainerSimpleTitle} onClick={gotoRoute}>
+                        <Link href='#Servicios'>
                             <span>Servicios</span>
                         </Link>
                     </div>
-                    <div className={styles.ContainerSimpleTitle}>
-                        <Link href='#'>
+                    <div className={styles.ContainerSimpleTitle} onClick={gotoRoute}>
+                        <Link href='#Unidades'>
                             <span>Unidades</span>
                         </Link>
                     </div>
-                    <div className={styles.ContainerSimpleTitle}>
-                        <Link href='#'>
+                    <div className={styles.ContainerSimpleTitle} onClick={gotoRoute}>
+                        <Link href='#Porque'>
                             <span>¿Porque TMH?</span>
                         </Link>
                     </div>
-                    <div className={styles.ContainerSimpleTitle}>
-                        <Link href='#'>
+                    <div className={styles.ContainerSimpleTitle} onClick={gotoRoute}>
+                        <Link href='#SobreNosotros'>
                             <span>Sobre nosotros</span>
                         </Link>
                     </div>

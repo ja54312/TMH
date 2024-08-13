@@ -1,11 +1,12 @@
 //Components
 import Image from 'next/image';
+import Link from 'next/link';
 //styles
 import styles from './ServiciosTab.module.sass';
 
 export const ServiciosTab = () => {
     return (
-        <section className={styles.SectionServiciosTab}>
+        <section className={styles.SectionServiciosTab} id='Servicios'>
             <div className={styles.ContainerTitle}>
                 <div className={styles.title}>
                     <span>Servicios que marcan la diferencia</span>
@@ -48,7 +49,9 @@ export const ServiciosTab = () => {
             </div>
             <div className={styles.ContainerButton}>
                 <div className={styles.button}>
-                    <span>Solicitar una cotización</span>
+                    <Link href="#HeroForm">
+                        <span>Solicitar una cotización</span>
+                    </Link>
                 </div>
             </div>
         </section>

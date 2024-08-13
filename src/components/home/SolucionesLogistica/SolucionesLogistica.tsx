@@ -5,7 +5,7 @@ import styles from './SolucionesLogistica.module.sass'
 
 export const SolucionesLogistica = () => {
     return (
-        <section className={styles.SectionSolucionesLogistica}>
+        <section className={styles.SectionSolucionesLogistica} id='Porque'>
             <div className={styles.backgroung}></div>
             <div className={styles.Content}>
                 <div className={styles.containerTitle}>
