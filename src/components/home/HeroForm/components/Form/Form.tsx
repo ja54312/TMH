@@ -18,10 +18,10 @@ export const Form = () => {
     }
 
     const [form, setForm] = useState(initialForm)
-    //let errores: initialErrorProps = {}
-    //const [errorsState, setErrorsState] = useState(errores)
+    let errores: initialErrorProps = {}
+    const [errorsState, setErrorsState] = useState(errores)
+    console.log("Errores", errorsState)
 
-    //console.log("Formulario", form)
     //Handle para actualizar los valores del form 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({
@@ -40,7 +40,7 @@ export const Form = () => {
     //Handle para ir mapeando los errores 
     const handleBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
         handleChange(e);
-        //setErrorsState(validationsForm(form))
+        setErrorsState(validationsForm(form))
     };
 
     //Handle para Seleccionar el tipo de Servicio 
@@ -59,126 +59,49 @@ export const Form = () => {
         });
     }
 
-    // /*VALIDACIONES*/
-    // const validationsForm = (form: initialFormProps) => {
-    //     let errors: initialErrorProps = {}
+    /*VALIDACIONES*/
+    const validationsForm = (form: initialFormProps) => {
+        let errors: initialErrorProps = {}
 
-    //     /*Validacion Razon Social*/
-    //     if (!form.razon_social.trim()) {
-    //         errors.razon_social = 'Este campo es obligatorio'
-    //     }
-    //     /*Validacion Cedula Ciudadana*/
-    //     const regexCCNovacio = /.+/;
-    //     const regexCCCantidadDigitos = /^\d{4,10}$/;
-    //     const regexCCSoloNumeros = /^\d+$/;
-    //     const regexCCNoIniciarConCero = /^[1-9]\d*$/;
-    //     const regexCCNoNueveDigitos = /^(?!\d{9}$)\d+$/;
-    //     const regexCCNoEmepzarPor = /^[0-5]\d{3,9}$/;
+        const campoNovacio = /.+/;
+        const campoCantidadDigitos = /^\d{4,10}$/;
+        const campoSoloNumeros = /^\d+$/;
+        const regexEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/
 
-    //     if (natural && form.type_identification === "CC" && !regexCCNovacio.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo es obligatorio'
-    //     } else if (natural && form.type_identification === "CC" && !regexCCSoloNumeros.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo solo permite caracteres numéricos'
-    //     } else if (natural && form.type_identification === "CC" && !regexCCNoIniciarConCero.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo no puede iniciar con 0'
-    //     } else if (natural && form.type_identification === "CC" && !regexCCNoNueveDigitos.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo no permíte 9 dígitos'
-    //     } else if (natural && form.type_identification === "CC" && !regexCCCantidadDigitos.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Ingrese de 4 a 10 caracteres numéricos y si tiene 10 dígitos no debe iniciar por 6,7,8 ó 9'
-    //     } else if (natural && form.type_identification === "CC" && form.identification_natural.length === 10 && !regexCCNoEmepzarPor.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Ingrese de 4 a 10 caracteres numéricos y si tiene 10 dígitos no debe iniciar por 6,7,8 ó 9'
-    //     }
+        /*Nombre*/
+        if (!form.firstName.trim()) {
+            errors.firstName = 'Este campo es obligatorio'
+        } else if (/\d/.test(form.firstName)) {
+            errors.firstName = 'El nombre no puede contener números';
+        }
 
-    //     /*Validacion Pasaporte*/
-    //     const regexPANovacio = /.+/;
-    //     const regexPA = /^[a-zA-Z0-9]{6,16}$/;
+        /*Correo Electronico*/
+        if (form.email.length === 0) {
+            errors.email = 'Este campo es obligatorio'
+        } else if (!regexEmail.test(form.email.trim())) {
+            errors.email = 'Ingrese un email validado'
+        }
 
-    //     if (natural && form.type_identification === "PA" && !regexPANovacio.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo es obligatorio'
-    //     } else if (natural && form.type_identification === "PA" && !regexPA.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Ingrese de 6 a 16 caracteres alfanuméricos y sin digito de veríficacion'
-    //     }
 
-    //     /*Validacion Cedula Extranjera*/
-    //     const regexCENovacio = /.+/;
-    //     const regexCE = /^[1-9]\d{4,6}$/;
-    //     const regexCESoloNumeros = /^\d+$/;
-    //     const regexCENoIniciarConCero = /^[1-9]\d*$/;
+        /*Telefono*/
+        if (!form.phone) {
+            errors.phone = 'Este campo es obligatorio'
+        } else if (!/^\d+$/.test(form.phone.trim())) {
+            errors.phone = 'Solo caracteres numéricos sin espacios';
+        }
 
-    //     if (natural && form.type_identification === "CE" && !regexCENovacio.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo es obligatorio'
-    //     } else if (natural && form.type_identification === "CE" && !regexCESoloNumeros.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Ingrese solo caracteres numéricos'
-    //     } else if (natural && form.type_identification === "CE" && !regexCENoIniciarConCero.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'No se aceptan documentos que inicen por 0'
-    //     } else if (natural && form.type_identification === "CE" && !regexCE.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Ingrese de 5 a 7 caracteres numéricos'
-    //     }
-    //     /*Validacion NIT*/
-    //     const regexNITNovacio = /.+/;
-    //     const regexNITsoloNumeros = /^[0-9]+$/;
-    //     const regexNITiniciarConNumeros = /^[7-9].*/;
-    //     const regexNITNueveNumeros = /^(?!\d{9}$)\d+$/;
-    //     const regexNITSoloDiezNumeros = /^\d{10}$/;
 
-    //     if (!natural && form.type_identification === "NIT" && !regexNITNovacio.test(form.identification_juridica.trim())) {
-    //         errors.identification_juridica = 'Este campo es obligatorio'
-    //     } else if (!natural && form.type_identification === "NIT" && !regexNITsoloNumeros.test(form.identification_juridica.trim())) {
-    //         errors.identification_juridica = 'El NIT solo contiene caracteres numéricos'
-    //     } else if (!natural && form.type_identification === "NIT" && !regexNITiniciarConNumeros.test(form.identification_juridica.trim())) {
-    //         errors.identification_juridica = 'El NIT debe iniciar por 7,8 o 9,debe tener 10 caracteres númericos,con digito de verificación'
-    //     } else if (!natural && form.type_identification === "NIT" && !regexNITNueveNumeros.test(form.identification_juridica.trim())) {
-    //         errors.identification_juridica = 'El NIT debe iniciar por 7,8 o 9,debe tener 10 caracteres númericos,con digito de verificación'
-    //     } else if (!natural && form.type_identification === "NIT" && !regexNITSoloDiezNumeros.test(form.identification_juridica.trim())) {
-    //         errors.identification_juridica = 'El NIT debe iniciar por 7,8 o 9,debe tener 10 caracteres númericos,con digito de verificación'
-    //     }
-
-    //     /*Validacion TI*/
-    //     const regexTINovacio = /.+/;
-    //     if (natural && form.type_identification === "TI" && !regexTINovacio.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo es obligatorio'
-    //     }
-    //     /*Validacion RUT*/
-    //     const regexRUTNovacio = /.+/;
-    //     if (natural && form.type_identification === "RUT" && !regexRUTNovacio.test(form.identification_natural.trim())) {
-    //         errors.identification_natural = 'Este campo es obligatorio'
-    //     }
-
-    //     if (!usarDatos) {
-    //         const regexEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/
-    //         if (form.email.length === 0) {
-    //             errors.email = 'Este campo es obligatorio'
-    //         } else if (!regexEmail.test(form.email.trim())) {
-    //             errors.email = 'Ingrese un email validado'
-    //         }
-    //         const regexTel = /^\(?(3[0-9]{2}|4\d{2}|5\d{2}|6\d{2}|7\d{2})\)?[-.\s]?([2-9]\d{2})[-.\s]?(\d{4})$/
-    //         if (form.telefono.length === 0) {
-    //             errors.telefono = 'Este campo es obligatorio'
-    //         } else if (!regexTel.test(form.telefono.trim())) {
-    //             errors.telefono = 'Ingrese un número telefonico validado'
-    //         }
-    //         if (form.calle.length === 0) {
-    //             errors.calle = 'Este campo es obligatorio'
-    //         }
-    //         if (form.municipio.length === 0) {
-    //             errors.municipio = 'Este campo es obligatorio'
-    //         }
-    //         if (form.ciudad.length === 0) {
-    //             errors.ciudad = 'Este campo es obligatorio'
-    //         }
-    //     }
-
-    //     return errors
-    // }
+        return errors
+    }
 
 
 
     //Handle de envio de Formulario
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        //setErrorsState(validationsForm(form))
-        console.log("Formulario", form)
-        //if (Object.keys(errorsState).length === 0 && form.razon_social !== "") { updateDataFacturacion(order.id, form) }
+        setErrorsState(validationsForm(form))
+        //console.log("Formulario", form)
+        if (Object.keys(errorsState).length === 0) { console.log("Formulario Enviado", form) }
     }
 
 
@@ -239,6 +162,12 @@ export const Form = () => {
                                     onBlur={handleBlur}
                                     required
                                 />
+                                {errorsState.firstName && (
+                                    <p className={styles.novalidado}>
+                                        {errorsState.firstName}
+                                    </p>
+                                )}
+
                             </div>
                         </div>
                         <div className={styles.rowInputs}>
@@ -255,6 +184,11 @@ export const Form = () => {
                                     onBlur={handleBlur}
                                     required
                                 />
+                                {errorsState.email && (
+                                    <p className={styles.novalidado}>
+                                        {errorsState.email}
+                                    </p>
+                                )}
                             </div>
                             <div className={styles.containerInput}>
                                 <label htmlFor="phone">Teléfono</label>
@@ -271,6 +205,11 @@ export const Form = () => {
                                     pattern="[0-9]*"
                                     inputMode="numeric"
                                 />
+                                {errorsState.phone && (
+                                    <p className={styles.novalidado}>
+                                        {errorsState.phone}
+                                    </p>
+                                )}
                             </div>
                         </div>
                     </div>
