@@ -6,7 +6,7 @@ import styles from './ServiciosTab.module.sass';
 
 export const ServiciosTab = () => {
     return (
-        <section className={styles.SectionServiciosTab}>
+        <section className={styles.SectionServiciosTab} id='Servicios'>
             <div className={styles.ContainerTitle}>
                 <div className={styles.title}>
                     <span>Servicios que marcan la diferencia</span>

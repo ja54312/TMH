@@ -6,7 +6,7 @@ import styles from './DescubreComoviajamos.module.sass'
 
 export const DescubreComoViajamos = () => {
     return (
-        <section className={styles.SectionDescubreComoViajamos}>
+        <section className={styles.SectionDescubreComoViajamos} id='Unidades'>
             <div className={styles.containerBackground}>
                 <div className={styles.containerImg}>
                     <Image src="/images/almacenFondo.jpeg" alt="camion25T" fill />
