@@ -1,7 +1,7 @@
 //Components
 import Image from 'next/image';
 import Link from 'next/link';
-import { ServicioTransporte } from './components';
+import { ServicioTransporte } from './components/ServiciosTransporte';
 //styles
 import styles from './ServiciosTab.module.sass';
 

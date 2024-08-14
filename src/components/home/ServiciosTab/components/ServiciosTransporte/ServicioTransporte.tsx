@@ -4,7 +4,7 @@ import { useState } from 'react';
 //Components
 import Image from 'next/image';
 //styles
-import styles from '../ServiciosTab.module.sass';
+import styles from '../../ServiciosTab.module.sass';
 //data
 import { dataServiciosTransporte as data } from './dataServiciosTransporte';
 
