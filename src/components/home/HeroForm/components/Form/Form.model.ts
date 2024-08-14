@@ -3,17 +3,17 @@ export interface initialFormProps {
     fechaServicio: string
     firstName: string
     email: string
-    phone: number | string
+    phone: string
     tyc: boolean
 }
 
 export type Services = 'Servicio de Almacenaje' | 'Servicio de Transporte' | ''
 
 export interface initialErrorProps {
-    tipodeServicio: string
-    fechaServicio: string
-    firstName: string
-    email: string
-    phone: number | string
-    tyc: boolean
+    tipodeServicio?: string
+    fechaServicio?: string
+    firstName?: string
+    email?: string
+    phone?: string | number
+    tyc?: boolean
 }
