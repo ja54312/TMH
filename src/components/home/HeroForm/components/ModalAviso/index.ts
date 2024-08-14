@@ -1,0 +1,1 @@
+export { ModalAviso } from "./ModalAviso";

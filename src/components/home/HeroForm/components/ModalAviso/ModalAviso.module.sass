@@ -1,0 +1,72 @@
+.visible
+    width: 0
+    height: 0
+    opacity: 0
+    transform: translateX(-100%)
+    transition: opacity 0.3s ease, transform 0.3s ease
+    &_content
+        display: none
+.modal
+    z-index: 3
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    opacity: 1
+    transform: translateX(0%)
+    transition: opacity 0.3s ease, transform 0.3s ease
+    font-family: $font-source
+    &_content
+        background-color: #FFFFFF
+        height: 95%
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16)
+        width: 340px
+        overflow: auto
+        border-radius: 8px
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media screen and (min-width: 769px)
+            width: 536px
+            height: 100%
+    .containerClose
+        width: 100%
+        height: 76px
+        display: flex
+        align-items: center
+        flex-direction: row
+        justify-content: center
+        margin-top: 20px
+        margin-bottom: 20px
+        .close
+            font-size: 36px
+            cursor: pointer
+            position: absolute
+            right: 5%
+            top: 1%
+        .text
+            font-size: 24px
+            font-weight: 700
+            line-height: 28px
+            text-align: center
+            color: #00A0E1
+    .contentAviso
+        width: 90%
+        height: 100%
+        color: #000000
+        & p
+            font-size: 16px
+            font-weight: 400
+            line-height: 24px
+            text-align: left
+        & span
+            font-size: 16px
+            font-weight: 400
+            line-height: 24px
+            text-align: left

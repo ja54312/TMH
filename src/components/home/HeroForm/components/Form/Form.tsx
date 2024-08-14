@@ -1,12 +1,18 @@
 "use client"
 //hooks
 import { useState } from 'react'
+import useModal from '../../../../../hooks/useModal'
+//Helpers
+import { helpHttp } from "@/helpers/helpHttp";
+import { ModalAviso } from '../ModalAviso/ModalAviso'
 //styles
 import styles from '../../HeroForm.module.sass'
 //types
 import { initialFormProps, initialErrorProps } from './Form.model'
 
 export const Form = () => {
+
+    const { isOpenModal, openModal, closeModal } = useModal();
 
     const initialForm: initialFormProps = {
         tipodeServicio: 'Servicio de Almacenaje',
@@ -20,7 +26,7 @@ export const Form = () => {
     const [form, setForm] = useState(initialForm)
     let errores: initialErrorProps = {}
     const [errorsState, setErrorsState] = useState(errores)
-    console.log("Errores", errorsState)
+    //console.log("Errores", errorsState)
 
     //Handle para actualizar los valores del form 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -94,6 +100,20 @@ export const Form = () => {
         return errors
     }
 
+    async function sendDataEmail(form: initialFormProps) {
+        //console.log("Enviando Email");
+        const url = `/api/send`
+        let options = {
+            body: form,
+            headers: { "content-type": "application/json" },
+        };
+        await helpHttp()
+            .post(url, options)
+            .then((res) => {
+                //console.log(res)
+            });
+    }
+
 
 
     //Handle de envio de Formulario
@@ -101,12 +121,13 @@ export const Form = () => {
         e.preventDefault()
         setErrorsState(validationsForm(form))
         //console.log("Formulario", form)
-        if (Object.keys(errorsState).length === 0) { console.log("Formulario Enviado", form) }
+        if (Object.keys(errorsState).length === 0) { sendDataEmail(form) }
     }
 
 
     return (
         <form className={styles.ContainerForm} onSubmit={handleSubmit}>
+            <ModalAviso isOpenModal={isOpenModal} closeModal={closeModal} />
             <div className={styles.title}>
                 <span>Cotiza tu servicio de transporte y almacenaje</span>
             </div>
@@ -226,7 +247,7 @@ export const Form = () => {
                                     id="checkForm"
                                     required
                                 />
-                                <label htmlFor="checkForm">Acepto que he leído el <b>Aviso de privacidad</b></label>
+                                <label htmlFor="checkForm">Acepto que he leído el </label><b onClick={openModal}>Aviso de privacidad</b>
                             </div>
                             <div className={styles.containerInputButton}>
                                 <input
