@@ -5,25 +5,33 @@ import { useState } from 'react';
 import Image from 'next/image';
 //styles
 import styles from '../../ServiciosTab.module.sass';
-//data
-import { dataServiciosTransporte as data } from './dataServiciosTransporte';
+//types
+interface TipodeServiciosProps {
+    data: {
+        img: string;
+        title: string;
+        text: string;
+    }[];
+}
 
-export const ServicioTransporte = () => {
+
+export const TipodeServicios: React.FC<TipodeServiciosProps> = ({ data }) => {
 
     const [countCard, setCountCard] = useState(1);
     //console.log('countCard', countCard);
     //console.log('data', data);
+    const maxData = data?.length;
 
     const handleLeft = () => {
         if (countCard === 1) {
-            setCountCard(7);
+            setCountCard(maxData);
         } else {
             setCountCard(countCard - 1);
         }
     }
 
     const handleRight = () => {
-        if (countCard === 7) {
+        if (countCard === maxData) {
             setCountCard(1);
         } else {
             setCountCard(countCard + 1);
@@ -63,7 +71,7 @@ export const ServicioTransporte = () => {
                         <Image src="/icons/arrow-left.png" alt="arrow" width={20} height={20} onClick={handleLeft} />
                         <div className={styles.containerTextCount}>
                             <span className={styles.countNumber}>{countCard}</span>
-                            <span> - 7</span>
+                            <span> - {maxData}</span>
                         </div>
                         <Image src="/icons/arrow-right.png" alt="arrow" width={20} height={20} onClick={handleRight} />
                     </div>

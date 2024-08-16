@@ -1,1 +1,0 @@
-export { ServicioTransporte } from "./ServicioTransporte";

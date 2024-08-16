@@ -1,7 +1,7 @@
 //Components
 import Image from 'next/image';
 import Link from 'next/link';
-import { ServicioTransporte } from './components/ServiciosTransporte';
+import { TabsSelected } from './components/TabsSelected';
 //styles
 import styles from './ServiciosTab.module.sass';
 
@@ -16,17 +16,7 @@ export const ServiciosTab = () => {
                     <p>Mediante el uso de análisis de datos avanzados, tecnologías de vanguardia y prácticas sostenibles, garantizamos que cada eslabón de la cadena de suministro funcione en armonía.</p>
                 </div>
             </div>
-            <div className={styles.ContainerTabs}>
-                <div className={styles.Tabs}>
-                    <div className={styles.Tab}>
-                        <span>Transporte</span>
-                    </div>
-                    <div className={styles.Tab}>
-                        <span>Almacenaje</span>
-                    </div>
-                </div>
-                <ServicioTransporte />
-            </div>
+            <TabsSelected />
             <div className={styles.ContainerButton}>
                 <div className={styles.button}>
                     <Link href="#HeroForm">

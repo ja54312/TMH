@@ -22,7 +22,7 @@ export const ContactHome = () => {
                 <div className={styles.containerImg}>
                     <div className={styles.img}>
                         <Image
-                            src="/images/imagen-camion-caja-blanca.png"
+                            src="/images/imagen-camion-caja-blanca-conLogo.png"
                             alt='camion caja blanca'
                             fill
                         />
