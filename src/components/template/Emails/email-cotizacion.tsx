@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface EmailTemplateProps {
+interface EmailTemplateCotizacionProps {
     body: {
         tipodeServicio: string
         fechaServicio: string
@@ -11,7 +11,7 @@ interface EmailTemplateProps {
     }
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
+export const EmailTemplateCotizacion: React.FC<Readonly<EmailTemplateCotizacionProps>> = ({
     body: {
         tipodeServicio,
         fechaServicio,

@@ -1,4 +1,4 @@
-import { EmailTemplate } from '../../../components/template/Emails/email-tenplate';
+import { EmailTemplateCotizacion } from '../../../components/template/Emails/email-cotizacion';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
@@ -14,7 +14,7 @@ export async function POST(req: Request) {
             to: ['ija54312@gmail.com'],
             from: 'Acme <onboarding@resend.dev>',
             subject: 'Solicitud de Cotización',
-            react: EmailTemplate(body),
+            react: EmailTemplateCotizacion(body),
         });
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
