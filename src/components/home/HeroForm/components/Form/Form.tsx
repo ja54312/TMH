@@ -24,6 +24,7 @@ export const Form = () => {
     }
 
     const [form, setForm] = useState(initialForm)
+    const [aviso, setAviso] = useState(false)
     let errores: initialErrorProps = {}
     const [errorsState, setErrorsState] = useState(errores)
     //console.log("Errores", errorsState)
@@ -59,6 +60,15 @@ export const Form = () => {
 
     //Handle para Seleccionar si se leyo el Aviso de Privacidad o no
     const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setAviso(!aviso)
+        setForm({
+            ...form,
+            tyc: !form.tyc
+        });
+    }
+
+    const handleAviso = () => {
+        setAviso(!aviso)
         setForm({
             ...form,
             tyc: !form.tyc
@@ -121,7 +131,10 @@ export const Form = () => {
         e.preventDefault()
         setErrorsState(validationsForm(form))
         //console.log("Formulario", form)
-        if (Object.keys(errorsState).length === 0) { sendDataEmail(form) }
+        if (Object.keys(errorsState).length === 0 && form.tyc) {
+            sendDataEmail(form)
+            //console.log("Formulario", form)
+        }
     }
 
 
@@ -239,13 +252,16 @@ export const Form = () => {
                     <div className={styles.containerInputs}>
                         <div className={styles.rowInputs}>
                             <div className={styles.containerInputCheck}>
+                                {aviso ? <div className={styles.falseCheckboxOn} onClick={handleAviso}>
+                                    <img src="/icons/Check.png" alt="check" />
+                                </div> : <div className={styles.falseCheckboxOff} onClick={handleAviso}>
+                                </div>}
                                 <input
                                     type='checkbox'
-                                    className={styles.input}
+                                    className={styles.inputCheck}
                                     onChange={handleChecked}
                                     name="checkForm"
                                     id="checkForm"
-                                    required
                                 />
                                 <label htmlFor="checkForm">Acepto que he leído el </label><b onClick={openModal}>Aviso de privacidad</b>
                             </div>

@@ -176,6 +176,11 @@
                                     align-items: center
                                     justify-content: flex-start
                                     height: 56px
+                                    position: relative
+                                    .inputCheck
+                                        display: none
+                                        margin-right: 5px
+                                        cursor: pointer
                                     & label
                                         font-family: $font-source
                                         font-size: 14px
@@ -192,6 +197,21 @@
                                         text-align: left
                                         color: #009DE4
                                         padding-left: 5px
+                                        cursor: pointer
+                                    .falseCheckboxOn
+                                        width: 10px
+                                        height: 10px
+                                        padding: 5px
+                                        border-radius: 4px
+                                        display: flex
+                                        background-color: #009DE4
+                                        border: 1px solid #009DE4
+                                        cursor: pointer
+                                    .falseCheckboxOff
+                                        width: 20px
+                                        height: 20px
+                                        border-radius: 4px
+                                        border: 1px solid #009DE4
                                         cursor: pointer
                                 .containerInputButton
                                     width: 140px
