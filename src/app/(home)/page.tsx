@@ -11,7 +11,25 @@ import { ContactHome } from "@/components/home/ContactHome"
 export const metadata: Metadata = {
     title: "TMH – Soluciones integrales en Logística",
     description: "",
-    keywords: [""],
+    keywords: [
+        "Servicios de logística",
+        "Transporte de mercancías",
+        "Gestión de inventarios",
+        "Distribución de productos",
+        "Almacenamiento seguro",
+        "Soluciones logísticas",
+        "Cadena de suministro",
+        "Optimización logística",
+        "Transporte de carga",
+        "Almacén logístico",
+        "Soluciones de transporte",
+        "Gestión de cadenas de suministro",
+        "Transporte de contenedores",
+        "Logística y distribución",
+        "Almacén y distribución",
+        "Empresa de logística integral",
+        "Transporte especializado",
+    ]
 }
 
 
