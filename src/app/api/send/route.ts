@@ -1,4 +1,5 @@
-import { EmailTemplateCotizacion } from '../../../components/template/Emails/email-cotizacion';
+import { TipodeServicios } from './../../../components/home/ServiciosTab/components/TIpodeServicios/TipodeServicios';
+import { EmailTemplateCotizacion } from '../../../components/template/Emails/SolicitudCotizacion/email-template';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
@@ -8,14 +9,15 @@ export async function POST(req: Request) {
     //console.log('req', req);
     const body = await req.json();
     //console.log('body', body);
-
+    const { tipodeServicio, fechaServicio, firstName, email, phone } = body;
     try {
         await resend.emails.send({
             to: ['ija54312@gmail.com'],
             from: 'Acme <onboarding@resend.dev>',
             subject: 'Solicitud de Cotización',
-            react: EmailTemplateCotizacion(body),
+            react: EmailTemplateCotizacion(tipodeServicio, fechaServicio, firstName, email, phone),
         });
+
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
     } catch (error) {
