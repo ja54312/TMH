@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import useModal from '../../../../../hooks/useModal'
 //Helpers
-import { helpHttp } from "@/helpers/helpHttp";
+import { helpHttp } from "../../../../../helpers/helpHttp";
+//components
 import { ModalAviso } from '../ModalAviso/ModalAviso'
+import Image from 'next/image';
 //styles
 import styles from '../../HeroForm.module.sass'
 //types
@@ -253,7 +255,9 @@ export const Form = () => {
                         <div className={styles.rowInputs}>
                             <div className={styles.containerInputCheck}>
                                 {aviso ? <div className={styles.falseCheckboxOn} onClick={handleAviso}>
-                                    <img src="/icons/Check.png" alt="check" />
+                                    <div className={styles.containerImg}>
+                                        <Image src="/icons/Check.png" alt="check" fill />
+                                    </div>
                                 </div> : <div className={styles.falseCheckboxOff} onClick={handleAviso}>
                                 </div>}
                                 <input
