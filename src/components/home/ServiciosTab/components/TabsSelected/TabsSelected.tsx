@@ -12,13 +12,16 @@ import { dataServiciosAlmacenaje } from '../database/dataServiciosAlmacenaje'
 export const TabsSelected = () => {
 
     const [tabSelected, setTabSelected] = useState('Transporte')
+    const [countCard, setCountCard] = useState(1);
 
     const handleSelectTransporte = () => {
         setTabSelected('Transporte')
+        setCountCard(1)
     }
 
     const handleSelectAlmacenaje = () => {
         setTabSelected('Almacenaje')
+        setCountCard(1)
     }
     //console.log(tabSelected)
     let data
@@ -38,7 +41,7 @@ export const TabsSelected = () => {
                     <span>Almacenaje</span>
                 </div>
             </div>
-            <TipodeServicios data={data} />
+            <TipodeServicios data={data} setCountCard={setCountCard} countCard={countCard} />
         </div>
     )
 }

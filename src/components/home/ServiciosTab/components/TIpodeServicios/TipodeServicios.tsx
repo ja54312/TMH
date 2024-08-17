@@ -12,12 +12,14 @@ interface TipodeServiciosProps {
         title: string;
         text: string;
     }[];
+    setCountCard: React.Dispatch<React.SetStateAction<number>>;
+    countCard: number;
 }
 
 
-export const TipodeServicios: React.FC<TipodeServiciosProps> = ({ data }) => {
+export const TipodeServicios: React.FC<TipodeServiciosProps> = ({ data, setCountCard, countCard }) => {
 
-    const [countCard, setCountCard] = useState(1);
+    //const [countCard, setCountCard] = useState(1);
     //console.log('countCard', countCard);
     //console.log('data', data);
     const maxData = data?.length;
@@ -56,7 +58,7 @@ export const TipodeServicios: React.FC<TipodeServiciosProps> = ({ data }) => {
         <div className={styles.InfoTabs}>
             <div className={styles.containerImg}>
                 <div className={styles.Image}>
-                    <Image src={currentData.img} alt="Transporte" width={500} height={500} />
+                    <Image src={currentData.img} alt="Transporte" fill />
                 </div>
             </div>
             <div className={styles.containerInfo}>
