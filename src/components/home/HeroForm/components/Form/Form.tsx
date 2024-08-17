@@ -26,6 +26,7 @@ export const Form = () => {
     }
 
     const [form, setForm] = useState(initialForm)
+    const [selectedOption, setSelectedOption] = useState("");
     const [aviso, setAviso] = useState(false)
     let errores: initialErrorProps = {}
     const [errorsState, setErrorsState] = useState(errores)
@@ -54,6 +55,7 @@ export const Form = () => {
 
     //Handle para Seleccionar el tipo de Servicio 
     const handleServicio = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedOption(e.target.value);
         setForm({
             ...form,
             tipodeServicio: e.target.value
@@ -159,8 +161,9 @@ export const Form = () => {
                                     id='tipodeServicio'
                                     className={styles.input}
                                     onChange={handleServicio}
-                                    value={form.tipodeServicio}
+                                    value={selectedOption}
                                 >
+                                    <option value="" disabled>Seleccionar</option>
                                     <option value="Servicio de Almacenaje">*Servicio de Almacenaje</option>
                                     <option value="Servicio de Transporte">*Servicio de Transporte</option>
                                 </select>
