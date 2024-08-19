@@ -1,20 +1,19 @@
 import * as React from 'react';
 
 interface EmailTemplateCotizacionProps {
+    firstName: string
     tipodeServicio: string
     fechaServicio: string
-    firstName: string
     email: string
     phone: string
-    tyc: boolean
 }
 
 export const EmailTemplateCotizacion: React.FC<Readonly<EmailTemplateCotizacionProps>> = ({
+    firstName,
     tipodeServicio,
     fechaServicio,
-    firstName,
     email,
-    phone
+    phone,
 }) => {
 
     const styles = {
@@ -40,10 +39,14 @@ export const EmailTemplateCotizacion: React.FC<Readonly<EmailTemplateCotizacionP
             alignItems: 'center',
         },
         footerText: {
+            width: '34%',
             color: '#424242',
             fontFamily: 'Monserrat, sans-serif',
             fontSize: '12px',
             fontWeight: '400',
+        },
+        containeSpace: {
+            width: '33%',
         },
     };
 
@@ -72,10 +75,12 @@ export const EmailTemplateCotizacion: React.FC<Readonly<EmailTemplateCotizacionP
                 </p>
             </div>
             <footer style={styles.footer}>
+                <div style={styles.containeSpace}></div>
                 <div style={styles.containerText}>
                     <span style={styles.footerText}>THM Logística</span>
                     <span style={styles.footerText}>Todos los derechos reservados</span>
                 </div>
+                <div style={styles.containeSpace}></div>
             </footer>
         </body>
     );
