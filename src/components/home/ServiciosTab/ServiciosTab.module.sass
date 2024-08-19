@@ -59,8 +59,8 @@
                 align-items: center
                 border-radius: 40px 40px 0px 0px
                 background: #FFFFFF
-                cursor: pointer
                 @media screen and (min-width: 769px)
+                    cursor: pointer
                     width: 273px
                     height: 64px
                     margin-right: 5px
@@ -165,7 +165,8 @@
                         border-radius: 12px
                         background: #FFFFFF
                         box-shadow: 0px 6px 12px 0px #00000029
-                        cursor: pointer
+                        @media screen and (min-width: 769px)
+                            cursor: pointer
                         .containerTextCount
                             & span
                                 font-family: $font-popins
@@ -190,8 +191,8 @@
             align-items: center
             border-radius: 8px
             background: #009DE4
-            cursor: pointer
             @media screen and (min-width: 769px)
+                cursor: pointer
                 width: 210px
             & a
                 text-decoration: none
