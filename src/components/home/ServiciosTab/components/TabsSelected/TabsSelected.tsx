@@ -3,6 +3,7 @@
 import { useState } from 'react'
 //Components
 import { TipodeServicios } from '../TIpodeServicios'
+import classNames from 'classnames/bind';
 //styles
 import styles from '../../ServiciosTab.module.sass'
 //data
@@ -31,13 +32,23 @@ export const TabsSelected = () => {
         data = dataServiciosAlmacenaje
     }
 
+    const cx = classNames.bind(styles);
+
+    const tabStyles01 = cx('Tab', {
+        'tabSelected': tabSelected === 'Transporte',
+    });
+
+    const tabStyles02 = cx('Tab', {
+        'tabSelected': tabSelected === 'Almacenaje',
+    });
+
     return (
         <div className={styles.ContainerTabs}>
             <div className={styles.Tabs}>
-                <div className={styles.Tab} onClick={handleSelectTransporte}>
+                <div className={tabStyles01} onClick={handleSelectTransporte}>
                     <span>Transporte</span>
                 </div>
-                <div className={styles.Tab} onClick={handleSelectAlmacenaje}>
+                <div className={tabStyles02} onClick={handleSelectAlmacenaje}>
                     <span>Almacenaje</span>
                 </div>
             </div>

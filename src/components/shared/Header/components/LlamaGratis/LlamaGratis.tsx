@@ -14,7 +14,7 @@ export const LlamaGratis = () => {
                     height={20}
                 />
                 <span>
-                    Llama gratis (55) 5510791481
+                    Llama gratis (55) 10791481
                 </span>
             </div>
         </div>
