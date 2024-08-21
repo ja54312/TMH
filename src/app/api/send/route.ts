@@ -13,7 +13,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
         } else {
             await resend.emails.send({
-                to: ['ija54312@gmail.com'],
+                to: ['info@tmhlogistica.com'],
                 from: 'Acme <onboarding@resend.dev>',
                 subject: 'Solicitud de Cotización',
                 react: EmailTemplateCotizacion({ tipodeServicio, fechaServicio, firstName, email, phone }),
