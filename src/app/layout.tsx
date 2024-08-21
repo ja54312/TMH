@@ -11,6 +11,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="es">
+            <head>
+                <link rel="icon" href="/icons/LogoTMH.png" sizes="any" />
+            </head>
             <body className={`${inter.variable} ${monse.variable} ${source.variable} ${poppins.variable}`}>
                 <Header />
                 {children}
