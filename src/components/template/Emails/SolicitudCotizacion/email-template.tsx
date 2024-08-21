@@ -102,7 +102,7 @@ export const EmailTemplateCotizacion: React.FC<Readonly<EmailTemplateCotizacionP
             <header style={styles.header}>
                 <div style={styles.containeSpace}></div>
                 <div style={styles.containeLogo}>
-                    <img src="https://tmh.vercel.app/_next/image?url=%2Ficons%2FLogoTMH.png&w=128&q=75" alt="THM Logística" width={114} height={38} />
+                    <img src="https://res.cloudinary.com/davhblw2l/image/upload/v1724204196/LogoTMH_dr0e9y.png" alt="THM Logística" width={114} height={38} />
                 </div>
                 <div style={styles.containeSpace}></div>
             </header>
@@ -133,7 +133,7 @@ export const EmailTemplateCotizacion: React.FC<Readonly<EmailTemplateCotizacionP
                         </div>
                     </div>
                     <div style={styles.containerImg}>
-                        <img src="/images/box9.png" alt="THM Logística" width={150} height={192} />
+                        <img src="https://res.cloudinary.com/davhblw2l/image/upload/v1724204137/box9_q1rrcq.png" alt="THM Logística" width={150} height={192} />
                     </div>
                 </div>
             </div>
