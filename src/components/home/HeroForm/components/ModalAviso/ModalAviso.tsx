@@ -1,7 +1,5 @@
 "use client"
 //components
-import Image from 'next/image';
-import Link from 'next/link';
 import classNames from 'classnames/bind';
 //Styles
 import styles from './ModalAviso.module.sass'
