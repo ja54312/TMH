@@ -1,8 +1,10 @@
 import { EmailTemplateCotizacion } from '../../../components/template/Emails/SolicitudCotizacion/email-template';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { config } from '@/config/config';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const emailSender = config.isProd ? 'info@tmhlogistica.com' : 'ija54312@gmail.com'
 
 export async function POST(req: Request) {
     try {
@@ -13,7 +15,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
         } else {
             await resend.emails.send({
-                to: ['info@tmhlogistica.com'],
+                to: [emailSender],
                 from: 'Acme <onboarding@resend.dev>',
                 subject: 'Solicitud de Cotización',
                 react: EmailTemplateCotizacion({ tipodeServicio, fechaServicio, firstName, email, phone }),
