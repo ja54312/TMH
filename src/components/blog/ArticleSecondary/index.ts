@@ -1,0 +1,1 @@
+export { ArticleSecondary } from './ArticleSecondary';

@@ -1,0 +1,100 @@
+.sectionArticleMain
+    max-width: 1448px
+    margin: 0 auto
+    width: 100%
+    height: 200px
+    position: relative
+    font-family: $font-primary
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #FFFFFF
+    @media screen and (min-width: 769px)
+        height: 393px
+    .containerArticleMain
+        width: 95%
+        height: 160px
+        border: 1px solid #CECECE
+        box-shadow: 0px 5px 4px 0px #DDDDDD40
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        @media screen and (min-width: 769px)
+            width: 90%
+            height: 281px
+        .containerInfo
+            width: 60%
+            height: inherit
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            @media screen and (min-width: 769px)
+                width: 50%
+            .title
+                font-size: 12px
+                font-weight: 700
+                line-height: normal
+                text-align: left
+                color: #2D3748
+                width: 70%
+                padding-left: 5%
+                margin-bottom: 5px
+                @media screen and (min-width: 769px)
+                    font-size: 24px
+                    line-height: 29.05px
+                    margin-bottom: 10px
+            .text
+                font-size: 8px
+                font-weight: 400
+                line-height: normal
+                text-align: left
+                color: #718096
+                width: 80%
+                padding-left: 5%
+                margin-bottom: 5px
+                @media screen and (min-width: 769px)
+                    font-size: 16px
+                    line-height: 19.36px
+                    width: 70%
+                    margin-bottom: 10px
+            .moreinfo
+                width: 70%
+                padding-left: 5%
+                margin-bottom: 10px
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                .date
+                    font-size: 8px
+                    font-weight: 400
+                    line-height: normal
+                    text-align: left
+                    color: #718096
+                    @media screen and (min-width: 769px)
+                        line-height: 14.52px
+                        font-size: 12px
+                .link
+                    font-size: 8px
+                    font-weight: 700
+                    line-height: normal
+                    text-align: left
+                    color: #2D3748
+                    @media screen and (min-width: 769px)
+                        line-height: 14.52px
+                        font-size: 12px
+                        cursor: pointer
+                    a
+                        text-decoration: none
+                        color: #2D3748
+                        &:hover
+                            color: #2D3748
+        .containerImage
+            position: relative
+            width: 40%
+            height: inherit
+            @media screen and (min-width: 769px)
+                width: 50%
+            & img
+                object-fit: cover
