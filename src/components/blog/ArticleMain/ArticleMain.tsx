@@ -1,5 +1,6 @@
 //Components
 import Image from 'next/image'
+import Link from 'next/link'
 //style
 import styles from './ArticleMain.module.sass'
 
@@ -19,7 +20,9 @@ export const ArticleMain = () => {
                             10 de Agosto 2024
                         </div>
                         <div className={styles.link}>
-                            Leer más
+                            <Link href='/blog/ejemploblog01'>
+                                Leer más
+                            </Link>
                         </div>
                     </div>
                 </div>

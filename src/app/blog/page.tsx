@@ -1,5 +1,6 @@
 //Components
 import { Metadata } from "next"
+import { BackgroundWhite } from "@/components/shared/BackgroundWhite"
 import { BannerHeroBlog } from "@/components/blog/BannerHeroBlog"
 import { ArticleMain } from "@/components/blog/ArticleMain"
 import { CarruselArticles } from "@/components/blog/CarruselArticles"
@@ -16,10 +17,12 @@ export const metadata: Metadata = {
 export default function Blog() {
     return (
         <main>
-            <BannerHeroBlog />
-            <ArticleMain />
-            <CarruselArticles />
-            <ArticleSecondary />
+            <BackgroundWhite>
+                <BannerHeroBlog />
+                <ArticleMain />
+                <CarruselArticles />
+                <ArticleSecondary />
+            </BackgroundWhite>
         </main>
     )
 }
