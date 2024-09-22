@@ -1,0 +1,1 @@
+export { BackgroundWhite } from "./BackgroundWhite";

@@ -1,0 +1,96 @@
+.sectionCarruselArticles
+    max-width: 1448px
+    margin: 0 auto
+    width: 100%
+    height: 300px
+    position: relative
+    font-family: $font-primary
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #EAEAEA
+    @media screen and (min-width: 769px)
+        height: 540px
+    .containerCards
+        width: 90%
+        height: 260px
+        margin: 0 auto
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        @media screen and (min-width: 769px)
+            height: 428px
+        .card
+            width: 100px
+            height: inherit
+            background: #FFFFFF
+            box-shadow: 0px 4px 4px 0px #C0BDBD40
+            @media screen and (min-width: 769px)
+                width: 362px
+            .image
+                position: relative
+                width: 100%
+                height: 40%
+                @media screen and (min-width: 769px)
+                    width: 100%
+                & img
+                    object-fit: cover
+            .info
+                display: flex
+                flex-direction: column
+                width: 90%
+                height: 60%
+                margin: 0 auto
+                .title
+                    font-family: $font-primary
+                    font-size: 12px
+                    font-weight: 700
+                    line-height: normal
+                    text-align: left
+                    color: #2D3748
+                    margin: 10px 0
+                    @media screen and (min-width: 769px)
+                        font-size: 20px
+                        line-height: 24.2px
+                .text
+                    color: #718096
+                    font-family: $font-primary
+                    font-size: 6px
+                    font-weight: 400
+                    line-height: normal
+                    text-align: left
+                    margin-bottom: 15px
+                    @media screen and (min-width: 769px)
+                        font-size: 16px
+                        line-height: 19.36px
+                .moreinfo
+                    width: 90%
+                    margin-bottom: 10px
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    .date
+                        font-size: 8px
+                        font-weight: 400
+                        line-height: normal
+                        text-align: left
+                        color: #718096
+                        @media screen and (min-width: 769px)
+                            line-height: 14.52px
+                            font-size: 12px
+                    .link
+                        font-size: 8px
+                        font-weight: 700
+                        line-height: normal
+                        text-align: left
+                        color: #2D3748
+                        @media screen and (min-width: 769px)
+                            line-height: 14.52px
+                            font-size: 12px
+                            cursor: pointer
+                        a
+                            text-decoration: none
+                            color: #2D3748
+                        &:hover
+                            color: #2D3748

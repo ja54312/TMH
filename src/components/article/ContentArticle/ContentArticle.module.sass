@@ -1,0 +1,96 @@
+.sectionContentArticle
+    max-width: 1448px
+    margin: 0 auto
+    width: 100%
+    height: auto
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #FFFFFF
+    font-family: $font-primary
+    @media screen and (min-width: 769px)
+        width: 90%
+        margin: 0 auto
+    .containerArticle
+        margin-top: 40px
+        width: 90%
+        .returnBlog
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: flex-start
+            margin-bottom: 20px
+            .containerArrow
+                width: 30px
+                height: 30px
+                position: relative
+                @media screen and (min-width: 769px)
+                    width: 40px
+                    height: 40px
+                & img
+                    object-fit: cover
+            & span
+                font-family: $font-primary
+                font-size: 16px
+                font-weight: 400
+                line-height: 21.78px
+                text-align: left
+                color: #2D3748
+                margin-left: 10px
+                @media screen and (min-width: 769px)
+                    font-size: 18px
+        & a
+            text-decoration: none
+            color: #2D3748
+            &:hover
+                color: #2D3748
+        .title
+            font-family: $font-primary
+            font-size: 36px
+            font-weight: 700
+            line-height: normal
+            text-align: left
+            color: #2D3748
+            @media screen and (min-width: 769px)
+                font-size: 45px
+                line-height: 54.46px
+        .authorLine
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: flex-start
+            margin: 20px 0
+            .author
+                font-family: $font-primary
+                font-size: 18px
+                font-weight: 700
+                line-height: 21.78px
+                text-align: left
+                color: #2D3748
+                margin-right: 10px
+            .line
+                font-family: $font-primary
+                font-size: 18px
+                font-weight: 400
+                line-height: 21.78px
+                text-align: left
+                color: #718096
+            .date
+                font-family: $font-primary
+                font-size: 18px
+                font-weight: 400
+                line-height: 21.78px
+                text-align: left
+                color: #718096
+                margin-left: 10px
+        .hr
+            border: 1px solid #E8E7E7
+        .info
+            font-family: $font-primary
+            font-size: 16px
+            font-weight: 400
+            line-height: 19.36px
+            text-align: left
+            color: #718096
+            margin-bottom: 50px
